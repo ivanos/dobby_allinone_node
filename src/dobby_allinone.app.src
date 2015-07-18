@@ -1,0 +1,15 @@
+{application, dobby_allinone,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  erl_sshd,
+                  dobby,
+                  dobby_rest
+                 ]},
+  {mod, { dobby_allinone_app, []}},
+  {env, []}
+ ]}.
