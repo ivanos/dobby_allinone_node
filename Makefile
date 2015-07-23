@@ -2,7 +2,7 @@ APPS = kernel stdlib sasl erts ssl tools runtime_tools crypto inets \
 	public_key mnesia syntax_tools compiler
 COMBO_PLT = $(HOME)/.dobby_allinone_dialyzer_plt
 
-.PHONY: all compile deps test clean distclean ct
+.PHONY: all compile deps test clean distclean ct build_plt check_plt dev
 
 all: generate
 
@@ -45,6 +45,8 @@ dialyzer: compile
 dev: compile
 	erl -pa ebin -pa deps/*/ebin \
 	-eval "application:ensure_all_started(dobby_allinone)."
+	-name "dobby_allinone@127.0.0.1" \
+	-setcookie dobby_allinone
 
 compile test clean: rebar
 
