@@ -4,6 +4,7 @@ This is an Erlang node that contains:
 
 1. [dobby_core_lib](https://github.com/ivanos/dobby_core_lib)
 2. [dobby_rest_lib](https://github.com/ivanos/dobby_rest_lib)
+3. [dobby_ui_lib](https://github.com/ivanos/dobby_ui_lib)
 3. [erl_sshd](https://github.com/marcsugiyama/erl_sshd)
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc/generate-toc again -->
@@ -26,6 +27,7 @@ To build the application call: `make`. This will:
 
 * download the dependencies,
 * compile the code,
+* copy the `dobby_ui_lib` nodeJS artefact to the `dobby_rest/priv/static/www`
 * generate an Erlang release,
 * generate ssh keys
   * private and public user keys: `ida_rsa` and `id_rsa.pub` respectively
@@ -47,6 +49,8 @@ to the `erl_sshd` section of `rel/files/sys.config`.
 ```
 rel/dobby_allinone/bin/dobby_allinone console
 ```
+
+To access the Dobby Visualizer go to http://localhost:8080/static/www/index.html
 
 ## Connecting via ssh
 If you genereated keys in erl_sshd before generating the dobby release,
