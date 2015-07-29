@@ -21,6 +21,7 @@ This is an Erlang node that contains:
 
 ## Requirements
 - Erlang R17+
+- [npm](https://www.npmjs.com/)
 
 ## Building
 To build the application call: `make`. This will:
