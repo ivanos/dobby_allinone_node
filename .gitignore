@@ -10,3 +10,4 @@ rel/dobby_allinone/
 rebar
 id_rsa*
 priv/erl_sshd
+priv/erl_cowboy
